@@ -45,8 +45,8 @@ class CharLCD(object):
     E_DELAY = 0.0005
     HOMEDELAY = 0.05
 
-    def __init__(self, rs=1, en=3, d4=15, d5=13, d6=12, d7=14,
-                 cols=16, rows=2):
+    def __init__(self, rs, en, d4, d5, d6, d7,
+                 cols=8, rows=2):
         """Constructor for LCD.
 
         Args:
@@ -57,7 +57,7 @@ class CharLCD(object):
             d6 (int): Data6 GPIO pin.
             d7 (int): Data7 GPIO pin.
             cols (int): Number of character columns.
-            lines (int): Number of display rows.
+            rows (int): Number of display rows.
         """
         # Define GPIO to LCD mapping
         self.rs = machine.Pin(rs, machine.Pin.OUT)
